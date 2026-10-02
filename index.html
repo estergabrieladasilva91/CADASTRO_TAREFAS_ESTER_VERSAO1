@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Painel de Tarefas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="cartao-aplicacao">
+
+        <!-- CABEÇALHO -->
+        <header class="cabecalho-aplicacao">
+
+            <div>
+                <p class="subtitulo">Organize seu dia ✨</p>
+                <h1>Minhas Tarefas</h1>
+            </div>
+
+            <button
+                id="botao-modo-escuro"
+                class="botao-principal"
+                title="Modo escuro"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </header>
+
+
+        <!-- CAMPO PARA ADICIONAR TAREFA -->
+        <div class="caixa-entrada">
+
+            <input
+                type="text"
+                id="campo-tarefa"
+                placeholder="O que vamos fazer hoje?..."
+                maxlength="40"
+            >
+
+            <button id="botao-adicionar" class="botao-principal">
+                <i class="fa-solid fa-plus"></i>
+                Adicionar
+            </button>
+
+        </div>
+
+
+        <!-- FUNÇÕES EXTRAS -->
+        <div class="funcoes">
+
+            <button id="botao-motivacao" class="botao-funcao">
+                🌷 Motivação
+            </button>
+
+            <button id="botao-cor" class="botao-funcao">
+                🎨 Mudar cor
+            </button>
+
+        </div>
+
+        <p id="mensagem-motivacional"></p>
+
+
+        <!-- LISTA DE TAREFAS -->
+        <ul id="lista-tarefas" class="lista-tarefas">
+        </ul>
+
+
+        <!-- RODAPÉ -->
+        <footer class="rodape-aplicacao">
+
+            <span id="contador-tarefas">
+                0 tarefas na lista
+            </span>
+
+            <div class="criador">
+
+                <img
+                    src="WhatsApp Image 2026-10-01 at 10.32.24.jpeg"
+                    alt="Ester"
+                >
+
+                <span>Criado por Ester</span>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

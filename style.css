@@ -1,0 +1,553 @@
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #fff0f6
+    );
+
+    color: #5a3042;
+
+    transition: 0.5s;
+}
+
+
+/* =================================
+   CARTÃO
+================================= */
+
+.cartao-aplicacao {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    border: 2px solid #ffd6e7;
+
+    box-shadow:
+        0 15px 40px rgba(190, 75, 125, 0.20);
+
+    transition: 0.4s;
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.cabecalho-aplicacao {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    color: #d66b98;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.cabecalho-aplicacao h1 {
+    color: #a83267;
+
+    font-size: 30px;
+}
+
+
+/* =================================
+   BOTÕES PRINCIPAIS
+================================= */
+
+.botao-principal {
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #ff6fa8,
+        #e83e82
+    );
+
+    border-radius: 12px;
+
+    padding: 13px 18px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 15px rgba(232, 62, 130, 0.3);
+}
+
+
+/* Botão do modo escuro */
+
+#botao-modo-escuro {
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    border-radius: 50%;
+}
+
+
+/* =================================
+   CAMPO DE TAREFA
+================================= */
+
+.caixa-entrada {
+    width: 100%;
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+#campo-tarefa {
+    min-width: 0;
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: 2px solid #f5cddd;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #5a3042;
+
+    background: #fff9fc;
+
+    transition: 0.3s;
+}
+
+#campo-tarefa:focus {
+    border-color: #ed6f9f;
+
+    box-shadow:
+        0 0 0 4px rgba(237, 111, 159, 0.12);
+}
+
+
+/* =================================
+   FUNÇÕES
+================================= */
+
+.funcoes {
+    width: 100%;
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 5px;
+}
+
+.botao-funcao {
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ffe1ed;
+
+    color: #c73872;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-funcao:hover {
+    background: #ffb8d3;
+
+    transform: translateY(-2px);
+}
+
+#mensagem-motivacional {
+    min-height: 25px;
+
+    margin: 10px 0;
+
+    text-align: center;
+
+    color: #c73872;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =================================
+   LISTA
+================================= */
+
+.lista-tarefas {
+    width: 100%;
+
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-height: 50px;
+
+    max-height: 350px;
+
+    overflow-y: auto;
+}
+
+
+/* =================================
+   TAREFAS
+================================= */
+
+.lista-tarefas li {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 14px 16px;
+
+    background: #fff6fa;
+
+    border: 1px solid #f6d4e2;
+
+    border-radius: 13px;
+
+    transition: 0.3s;
+
+    animation: aparecer 0.3s ease;
+}
+
+.texto-tarefa {
+    flex: 1;
+
+    min-width: 0;
+
+    word-break: break-word;
+}
+
+.lista-tarefas li:hover {
+    background: #fff0f6;
+
+    transform: translateX(3px);
+}
+
+
+.acoes-tarefa {
+    display: flex;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+}
+
+.acoes-tarefa button {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.concluir {
+    background: #ffe0ec;
+
+    color: #e83e82;
+}
+
+.concluir:hover {
+    background: #e83e82;
+
+    color: white;
+}
+
+.excluir {
+    background: #ffe5e5;
+
+    color: #d94b4b;
+}
+
+.excluir:hover {
+    background: #d94b4b;
+
+    color: white;
+}
+
+
+
+.lista-tarefas li.concluida {
+    opacity: 0.65;
+
+    background: #fff0f6;
+}
+
+.lista-tarefas li.concluida .texto-tarefa {
+    text-decoration: line-through;
+
+    color: #b47791;
+}
+
+
+.rodape-aplicacao {
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #f3d6e2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+#contador-tarefas {
+    color: #ad7189;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+
+.criador {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #b04f78;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.criador img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #ff75aa;
+
+    box-shadow:
+        0 3px 10px rgba(232, 62, 130, 0.25);
+}
+
+
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+body.modo-escuro {
+    background: linear-gradient(
+        135deg,
+        #24151d,
+        #3a1d2d
+    );
+
+    color: #ffeaf2;
+}
+
+body.modo-escuro .cartao-aplicacao {
+    background: #2b1a24;
+
+    border-color: #5e3046;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.modo-escuro .cabecalho-aplicacao h1 {
+    color: #ff9fc3;
+}
+
+body.modo-escuro .subtitulo {
+    color: #e68bab;
+}
+
+body.modo-escuro #campo-tarefa {
+    background: #3a2430;
+
+    color: #ffeaf2;
+
+    border-color: #694052;
+}
+
+body.modo-escuro #campo-tarefa::placeholder {
+    color: #c795aa;
+}
+
+body.modo-escuro .lista-tarefas li {
+    background: #38232e;
+
+    border-color: #5b3546;
+
+    color: #ffeaf2;
+}
+
+body.modo-escuro .lista-tarefas li:hover {
+    background: #442938;
+}
+
+body.modo-escuro .botao-funcao {
+    background: #512b3d;
+
+    color: #ffb4cf;
+}
+
+body.modo-escuro .botao-funcao:hover {
+    background: #66344d;
+}
+
+body.modo-escuro #contador-tarefas {
+    color: #d79aad;
+}
+
+body.modo-escuro .rodape-aplicacao {
+    border-color: #5b3546;
+}
+
+body.modo-escuro .criador {
+    color: #ff9fc3;
+}
+
+
+
+
+@media (max-width: 550px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .cartao-aplicacao {
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+    .cabecalho-aplicacao h1 {
+        font-size: 25px;
+    }
+
+    .caixa-entrada {
+        flex-direction: column;
+    }
+
+    #botao-adicionar {
+        width: 100%;
+    }
+
+    .funcoes {
+        flex-direction: column;
+    }
+
+    .rodape-aplicacao {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .lista-tarefas {
+        max-height: 300px;
+    }
+}
+          
